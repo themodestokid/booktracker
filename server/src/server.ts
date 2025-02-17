@@ -15,9 +15,9 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// if we're in production, serve client/build as static assets
 
-app.use(express.static('../client/dist'));
+
+app.use(express.static('../../client/dist'));
 
 
 app.use(routes);
