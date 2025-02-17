@@ -18,7 +18,7 @@ app.use(express.json());
 
 // if we're in production, serve client/build as static assets
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static('../client/dist'));
 
 
 app.use(routes);
