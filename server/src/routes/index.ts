@@ -11,8 +11,9 @@ import apiRoutes from './api/index.js';
 router.use('/api', apiRoutes);
 
 // serve up react front-end in production
-router.use((_req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, '../../../client/dist/index.html'));
+router.use((req: Request, res: Response) => {
+  console.log('request for unknown path', req.url)
+  //res.sendFile(path.join(__dirname, '../../../client/dist/index.html'));
 });
 
 export default router;
